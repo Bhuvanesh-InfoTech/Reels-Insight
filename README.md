@@ -1,204 +1,133 @@
-# 📊 Reels Insight
+# 🎬 Reels Insight
 
-An end-to-end data analytics and visualization project that analyzes Reels data using Python, Pandas, SQL, and Streamlit — from data preparation and exploratory analysis to an interactive analytics dashboard.
+An end-to-end data analytics project that transforms Reels data into meaningful insights using Python, Pandas, SQL, and an interactive Streamlit dashboard.
 
 ## Overview
 
-Reels Insight is a data analytics project designed to extract meaningful insights from Reels-related data.
+This project analyzes Reels-related data through a complete data analytics workflow — data preparation → data cleaning → exploratory analysis → SQL analysis → visualization → interactive dashboard.
 
-The project follows a complete analytics workflow:
-
-**Data → Data Cleaning → Exploratory Data Analysis → SQL Analysis → Streamlit Dashboard**
-
-The analysis is implemented through four Jupyter notebooks, with the processed data stored as CSV/database files and the final insights presented through an interactive Streamlit application.
+The project contains four Jupyter notebooks for data processing and analysis, CSV/database files for storing the data, and a Streamlit application for presenting the final insights.
 
 ## Tech Stack
 
-| Layer | Tool |
-|---|---|
-| Language | Python 3 |
-| Data Analysis | `pandas`, `numpy` |
-| Data Visualization | `matplotlib`, `seaborn`, `plotly` |
-| Database | SQLite |
-| SQL | SQL queries |
-| Dashboard | `streamlit` |
-| Notebooks | Jupyter (`.ipynb`) |
+| Layer                | Tool                                |
+| -------------------- | ----------------------------------- |
+| Language             | Python 3                            |
+| Data Analysis        | `pandas`                            |
+| Numerical Processing | `numpy`                             |
+| Data Visualization   | `matplotlib` / `seaborn` / `plotly` |
+| Database             | **SQLite**                          |
+| SQL                  | SQL queries                         |
+| Dashboard            | `streamlit`                         |
+| Notebooks            | Jupyter (`.ipynb`)                  |
 
 ## Project Structure
 
 ```text
 Reels-Insight/
-│
-├── data/
-│   ├── *.csv
-│   └── *.db
-│
-├── notebooks/
+├── notebooks/          # Jupyter notebooks
 │   ├── 01_*.ipynb
 │   ├── 02_*.ipynb
 │   ├── 03_*.ipynb
 │   └── 04_*.ipynb
-│
-├── app.py
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── data/               # CSV files and database
+│   ├── *.csv
+│   └── *.db
+├── app.py              # Streamlit dashboard
+├── requirements.txt    # Python dependencies
+└── README.md
 ```
 
-## Data Analysis Pipeline
+## Data Pipeline
 
-The project is organized into four notebooks that cover the complete data analysis workflow.
+The project follows an end-to-end analytics workflow:
 
-### 1. Data Preparation
+```text
+Raw Reels Data
+      ↓
+Data Loading
+      ↓
+Data Cleaning & Preprocessing
+      ↓
+Exploratory Data Analysis
+      ↓
+SQL Analysis
+      ↓
+Insight Generation
+      ↓
+Streamlit Dashboard
+```
 
-`notebooks/01_*.ipynb`
+### Data Preparation
 
-- Load the raw Reels data
-- Inspect the dataset
-- Check data types
-- Identify missing values
-- Identify duplicate records
-- Perform initial data cleaning
+The notebooks are used to:
 
-### 2. Data Cleaning & Transformation
+1. Load and inspect the Reels dataset.
+2. Analyze data types and dataset structure.
+3. Identify and handle missing values.
+4. Check and remove duplicate records where required.
+5. Clean and transform the data.
+6. Perform Exploratory Data Analysis (EDA).
+7. Prepare data for SQL analysis and dashboard visualization.
 
-`notebooks/02_*.ipynb`
-
-- Clean and transform the data
-- Handle missing values
-- Remove duplicate records
-- Convert columns into appropriate data types
-- Prepare data for analysis
-
-### 3. Exploratory Data Analysis
-
-`notebooks/03_*.ipynb`
-
-- Analyze important metrics
-- Identify trends and patterns
-- Perform statistical analysis
-- Generate visualizations
-- Extract meaningful insights from the dataset
-
-### 4. SQL / Final Analysis
-
-`notebooks/04_*.ipynb`
-
-- Load processed data into the database
-- Perform SQL-based analysis
-- Use filtering, aggregation, grouping, and joins where required
-- Generate analytical results for the dashboard
+Run the notebooks in order using VS Code or Jupyter.
 
 ## Database
 
-The project uses **SQLite** as the database.
+The project uses **SQLite** for storing and querying the processed data.
 
-SQLite is used because it is lightweight and does not require a separate database server.
+SQLite was selected because it is lightweight, requires no separate database server, and integrates easily with Python.
 
-The database contains the processed Reels data used for analytical queries and dashboard visualizations.
+The database supports SQL-based analysis and provides data for the Streamlit dashboard.
+
+## SQL Analysis
+
+SQL is used to perform analytical queries and identify useful patterns from the Reels dataset.
+
+The analysis covers:
+
+* Filtering using `WHERE`
+* Sorting using `ORDER BY`
+* Aggregations using `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`
+* `GROUP BY`
+* `HAVING`
+* `JOIN`s
+* Subqueries
+* Ranking and comparison queries
 
 ## Dashboard
 
-The project includes an interactive **Streamlit dashboard** implemented in:
+The final analysis is presented through an interactive **Streamlit** dashboard.
 
-```text
-app.py
-```
+### Dashboard Features
 
-The dashboard provides an easy-to-use interface for exploring the analyzed Reels data and viewing key insights through tables, metrics, and visualizations.
+* Dataset overview
+* Key performance metrics
+* Interactive filters
+* Data visualizations
+* Reels performance analysis
+* Analytical data tables
 
-### Run the Dashboard
 
-Create and activate the virtual environment:
+## Key Concepts Demonstrated
 
-```bash
-python -m venv venv
-```
+* Python programming
+* Pandas data manipulation
+* Data cleaning and preprocessing
+* Exploratory Data Analysis (EDA)
+* SQL querying
+* SQLite database
+* Data visualization
+* Jupyter notebooks
+* Streamlit dashboard development
+* Data-driven insights
 
-Windows PowerShell:
+## Project Objective
 
-```powershell
-.\venv\Scripts\Activate.ps1
-```
+The main objective of **Reels Insight** is to transform raw Reels data into meaningful analytical insights and present those insights through an interactive dashboard.
 
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the Streamlit application:
-
-```bash
-streamlit run app.py
-```
-
-The application will normally be available at:
-
-```text
-http://localhost:8501
-```
-
-## Key Analysis
-
-The project focuses on extracting useful insights from Reels data, including:
-
-- Content performance
-- Engagement-related metrics
-- Views and reach analysis
-- Performance comparisons
-- Trend analysis
-- Data-driven content insights
-
-## Key Features
-
-- 📥 Data loading and preparation
-- 🧹 Data cleaning and transformation
-- 🔍 Exploratory Data Analysis
-- 🗄️ SQLite database integration
-- 📊 SQL-based analysis
-- 📈 Interactive visualizations
-- 🎛️ Streamlit dashboard
-- 📋 Analytical tables and KPIs
-
-## How to Run the Project
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Bhuvanesh-InfoTech/Reels-Insight.git
-```
-
-Navigate to the project directory:
-
-```bash
-cd Reels-Insight
-```
-
-Create the virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate the environment:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the Streamlit dashboard:
-
-```bash
-streamlit run app.py
-```
+This project demonstrates an end-to-end data analytics workflow from raw data to final visualization.
 
 ## Author
 
-Built as a data analytics portfolio project demonstrating Python programming, Pandas-based data analysis, SQL, data visualization, SQLite database usage, and Streamlit dashboard development.
+Built as a data analytics portfolio project covering Python, data preprocessing, exploratory data analysis, SQL, SQLite, visualization, and Streamlit dashboard development.
