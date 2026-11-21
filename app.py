@@ -145,6 +145,47 @@ section[data-testid="stSidebar"] .stMarkdown h3 {{
     font-family: 'Outfit', sans-serif;
 }}
 
+/* Sidebar navigation: bright, readable labels */
+section[data-testid="stSidebar"] [data-testid="stRadio"] label {{
+    padding: 0.55rem 0.8rem;
+    border-radius: 10px;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: all 0.15s ease;
+}}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label p,
+section[data-testid="stSidebar"] [data-testid="stRadio"] label div {{
+    color: #f1f0f8 !important;
+    opacity: 1 !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+}}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover {{
+    background: rgba(212,175,55,0.12);
+    border-color: rgba(212,175,55,0.35);
+}}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {{
+    background: linear-gradient(90deg, rgba(212,175,55,0.28), rgba(184,146,255,0.18));
+    border-color: rgba(212,175,55,0.6);
+}}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p {{
+    color: #f5d97a !important;
+}}
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {{
+    color: #aeb2d1 !important;
+}}
+
+/* Readable text in the main area on the dark background */
+[data-testid="stWidgetLabel"] p, [data-testid="stWidgetLabel"] label {{
+    color: #e8e6f0 !important;
+    font-weight: 600;
+}}
+.stApp .stMarkdown p, .stApp .stMarkdown li, .glass-card {{
+    color: #e8e6f0;
+}}
+
 /* Buttons */
 .stButton>button, .stDownloadButton>button {{
     background: linear-gradient(90deg, #d4af37, #b892ff);
